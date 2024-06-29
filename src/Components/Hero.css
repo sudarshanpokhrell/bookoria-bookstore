@@ -1,0 +1,97 @@
+.hero-section {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+.hero-info-section {
+  padding-left: 1vw;
+  width: 50%;
+  height: 100%;
+}
+.hero-heading {
+  text-align: left;
+  padding-top: 6vw;
+  margin-left: 3vw;
+  font-size: 3rem;
+}
+
+.hero-text {
+  margin-left: 3vw;
+  padding-top: 3vw;
+  font-size: 1.5rem;
+}
+
+.button {
+  margin: 3vw;
+  height: 50px;
+  width: 180px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #463F3A;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #463F3A;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #463F3A;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+.images-section {
+  width: 55%;
+  height: 100%;
+  position: relative;
+}
+.hero-img {
+  position: relative;
+  height: 22vw;
+  border-radius: 10px;
+}
+.hero-img-2 {
+  top: 8%;
+  height: 21vw;
+  left: 15%;
+}
+.hero-img-3 {
+  top: 16%;
+  left: 50%;
+  height: 19vw;
+}
+.hero-img-1 {
+  height: 13vw;
+  width: 22vw;
+  top: 18%;
+  left: 28%;
+}

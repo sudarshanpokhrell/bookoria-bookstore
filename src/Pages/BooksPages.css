@@ -1,0 +1,116 @@
+.books-page {
+  font-family: "Montserrat", sans-serif;
+  margin: 3rem;
+  min-height: 100vh; /* Ensures at least full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.books-page .section-heading {
+  padding: 0;
+  margin-bottom: 1rem; /* Add some space below the heading */
+}
+
+.books-page .books-container {
+  flex: 1; /* Fill remaining vertical space */
+  width: 100%;
+  margin-top: 2rem;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds container */
+}
+
+.books-page .sort-by {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem; /* Add some space below the sort-by section */
+}
+
+.sort-by span {
+  font-size: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+
+.sort-by select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.books-page .books-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  /* justify-content: space-around; */
+   /* Align items evenly */
+}
+
+.book-item {
+  width: 12rem; /* Set a fixed width for consistent layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.books-page .books-list .book-item .book-image {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 10px; /* Add rounded corners to the image */
+}
+
+.books-page-information {
+  flex: 1; /* Expand to fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.book-page-name {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 0;
+  text-align: center; /* Center align book title */
+}
+
+.book-page-cost {
+  font-weight: 500;
+  text-align: center; /* Center align book price */
+}
+
+.book-cart-link {
+  width: 100%;
+  height: 2.8rem;
+  background: none;
+  margin-top: 5px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  border: 1.5px solid #463f3a;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book-cart-link:hover {
+  background-color: #463f3a;
+  color: white;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+.book-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-link:hover .book-image {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}

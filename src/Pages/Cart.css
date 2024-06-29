@@ -1,0 +1,135 @@
+.cart-page {
+  margin: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+.cart-page-heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.cart-page-top {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid black;
+}
+.cart-item {
+  width: 100%;
+  margin: 3rem 0;
+  height: 12rem;
+  display: flex;
+}
+.cart-product{
+    display: flex;
+    width: 45%;
+}
+.cart-item-img {
+  height: 12rem;
+  min-width: 8rem;
+}
+.cart-item-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.cart-item-info {
+  padding: 1.5rem 1rem;
+}
+.cart-book-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: auto;
+}
+.cart-book-price {
+  font-size: 1.22rem;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.cart-item-quantity {
+  width: 30%;
+  padding: 1.5rem 1rem;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.quantity-span-cart {
+  height: 3rem;
+  width: 8rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 15px;
+  font-size: 1.21rem;
+}
+
+.cart-delete {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.cart-item-total {
+  width: 25%;
+  font-size: 1.22rem;
+  font-weight: 500;
+  padding: 1.5rem 1rem;
+  text-align: right;
+}
+.checkout-summary {
+  text-align: center;
+  margin: 2rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.checkout-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.checkout-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.checkout-details {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.checkout-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkout-button {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 3rem;
+  width: 15rem;
+
+}
+
+.checkout-button:hover {
+  background-color: #333;
+}

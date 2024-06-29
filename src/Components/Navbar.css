@@ -1,0 +1,75 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 0.5vw 3rem;
+    height: 7vw;
+    font-family: "Montserrat", sans-serif;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    font-family: "Montserrat", sans-serif;
+}
+.nav-links{
+    display: flex;
+    gap: 2vw;
+    list-style-type: none;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+}
+.icon-links{
+    display: flex;
+    list-style-type: none;
+    gap: 2vw;
+    align-items: center;
+    font-size: 2vw;
+}
+.icon-links {
+    position: relative;
+}
+.icon-links li:hover{
+    transform: scale(1.1);
+}
+
+.hamburger-menu{
+    font-size: 2.5vw;
+    display: none;
+}
+.cart-number{
+    position: absolute;
+    right: -10%;
+    bottom: 2%;
+    background-color: black;
+    color: white;
+    height: 21px;
+    width: 21px;
+    padding: 1px;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 500;
+
+}
+@media screen and (max-width: 768px) {
+.navbar-container{
+    padding-top:1.5vw ;
+}
+.logo{
+    font-size: 1.5rem;
+} 
+.nav-links{
+    display: none;
+}
+.hamburger-menu{
+    display: block;
+    font-size: 1.5rem;
+}
+.icon-links{
+    font-size: 1.5rem;
+}
+}
+  

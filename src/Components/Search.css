@@ -1,0 +1,109 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.search-window {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  overflow: hidden;
+}
+.search-section {
+  height: 18%;
+  width: 100%;
+  background-color: white;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  align-items: center;
+  padding: 0.5vw 0;
+}
+.suggestion-window {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-height: 60%;
+  background-color: #fdfdfd;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 150;
+  border-radius: 5px;
+  overflow-y: auto; /* Ensure suggestions can scroll if they overflow */
+  padding: 1vw;
+}
+.black-section {
+  height: 82%;
+  background-color: black;
+  opacity: 0.5;
+}
+.search-input {
+  height: 65%;
+  width: 60%;
+  border-radius: 15px;
+  padding: 0px 2vw;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.cross-icon {
+  font-size: 2vw;
+}
+.cross-icon:hover {
+  transform: scale(1.1);
+}
+.suggestion-text {
+  padding-left: 1vw;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.suggestions {
+  width: 100%; /* Ensure the container takes the full width */
+  padding: 1vw 0; /* Adjust padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.suggestion-item {
+  height: 7vw;
+  width: 55vw; /* Ensure each suggestion item takes the full width */
+  padding: 0.5vw;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+  overflow: hidden;
+
+}
+.suggestion-item:hover {
+  cursor: pointer;
+  background-color: #f4f3ee;
+}
+.suggestion-image-section {
+  height: 100%;
+  width: 5vw; /* Fixed width for the image section */
+}
+.suggestion-image-section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.suggestion-info-section {
+  flex-grow: 1; /* Allow this section to take the remaining space */
+}
+.book-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.book-author {
+  font-size: 0.9rem;
+}

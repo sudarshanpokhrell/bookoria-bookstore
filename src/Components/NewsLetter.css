@@ -1,0 +1,59 @@
+.newsletter {
+  background-color: #bcb8b1;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+.newsletter-p {
+  height: 11rem;
+}
+.newsletter-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.newsletter-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem 6rem;
+}
+.newsletter-form{
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.newsletter-form input{
+    width: 45vw;
+    height: 3rem;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem ;
+    border-right: none;
+    padding-left: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    border: solid 2px #463F3A;
+}
+.newsletter-form button{
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    border-top-right-radius: 1.2rem ;
+    border-bottom-right-radius: 1.2rem ;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    font-weight: 600;
+    background-color: #463F3A;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+  }
