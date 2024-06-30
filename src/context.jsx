@@ -33,7 +33,6 @@ export const AppProvider = ({ children }) => {
         setIsSubMenuOpen,
         openSubMenu,
         closeSubMenu,
-        setIsSubMenuOpen,
         subMenuLocation,
         subMenu,
         isSearch,
