@@ -8,6 +8,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(initialCart);
   const [addedtoCartPopup, setAddedtoCartPopup] = useState(false);
   const [popupMessage , setPopupMessage] = useState('')
+  
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);

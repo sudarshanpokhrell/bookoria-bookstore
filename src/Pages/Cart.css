@@ -133,3 +133,33 @@
 .checkout-button:hover {
   background-color: #333;
 }
+.no-cart{
+  text-align: center;
+}
+.go-back{
+  height: 3.5rem;
+  width: 20rem;
+  background: none;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #463f3a;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.go-back:hover{
+  background-color: #463f3a;
+  color: white;
+  transition: background-color 0.3s ease; 
+}
+.no-items-in-cart{
+  min-height: 70vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
