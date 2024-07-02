@@ -27,7 +27,7 @@ function Navbar() {
     <div className="navbar-container" onMouseOver={handleMouseOver}>
       <RxHamburgerMenu className="hamburger-menu" />
       <h1 className="logo">
-        <Link to="/"> bookoria</Link>
+        <Link to="/bookoria-bookstore/"> bookoria</Link>
       </h1>
 
       <ul className="nav-links">
