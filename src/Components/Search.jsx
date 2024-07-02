@@ -63,7 +63,7 @@ function Search() {
                 return (
                   <Link
                     style={{ textDecoration: "none" }}
-                    to={`/book/${book.title}`}
+                    to={`/bookoria-bookstore/book/${book.title}`}
                     key={index}
                   >
                     <div

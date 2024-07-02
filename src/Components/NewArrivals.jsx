@@ -22,7 +22,7 @@ function NewArrivals() {
       <div className="book-container">
         {sortedByPublicationDate.slice(0, 4).map((book, index) => (
           <div className="book-div" key={index}>
-            <Link to={`/book/${book.title}`} key={index} className="book-link-hover">
+            <Link to={`/bookoria-bookstore/book/${book.title}`} key={index} className="book-link-hover">
               <div className="book-card">
                 <img
                   className="book-img"

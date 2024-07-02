@@ -15,6 +15,7 @@ function Book() {
   const initialQuantity = cartItem ? cartItem.quantity : 1; // Set initial quantity from cart or default to 1
   const [quantity, setQuantity] = useState(initialQuantity);
 
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     setQuantity(initialQuantity)
@@ -44,7 +45,7 @@ function Book() {
           <div className="book-quantity">
             <p className="quantity-label">Quantity: {cartItem && '(In cart)'}</p>
             <div className="quantity-span">
-              <button onClick={() => decreaseQuantity(book.bookID)}>-</button>
+              <button onClick={()=> decreaseQuantity()}>-</button>
               <span>{initialQuantity}</span>
               <button onClick={() => increaseQuantity(book.bookID)}>+</button>
             </div>
@@ -59,7 +60,7 @@ function Book() {
         <div className="book-container">
           {sortedSoldBooks.slice(0, 4).map((book, index) => (
              <div className="book-div" key={index}>
-             <Link to={`/book/${book.title}`} className="book-link-hover">
+             <Link to={`/bookoria-bookstore/book/${book.title}`} className="book-link-hover">
                <div className="book-card">
                  <img
                    className="book-img"

@@ -68,7 +68,7 @@ function BooksPages() {
           <div className="books-list">
             {selectedBooks.map((book, index) => (
               <div className="book-item" key={index}>
-                <Link to={`/book/${book.title}`} className="book-link">
+                <Link to={`/bookoria-bookstore/book/${book.title}`} className="book-link">
                   <div className="top-clickable">
                     <img className="book-image" src={book.coverImage} alt={book.title} />
                     <div className="books-page-information">

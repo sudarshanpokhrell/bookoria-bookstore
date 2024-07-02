@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
           item.bookID === book.bookID
             ? {
                 ...item,
-                quantity:item.quantity +  quantity,
+                quantity:item.quantity + quantity,
                 amount: (item.quantity + quantity ) * item.price,
               }
             : item

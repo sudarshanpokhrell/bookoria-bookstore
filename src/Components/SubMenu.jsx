@@ -24,7 +24,7 @@ function SubMenu() {
     >
       {subMenu.map((item, index) => {
         return (
-          <Link  style={{textDecoration:"none"}} to={`/category/${item}`}>
+          <Link  style={{textDecoration:"none"}} to={`/bookoria-bookstore/category/${item}`}>
             <p className="submenu-item" key={index}>
               {item}
             </p>

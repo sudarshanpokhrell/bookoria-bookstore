@@ -22,10 +22,10 @@ function App() {
         <Popup />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/category/:bookCategory" element={<BooksPages />} />
-          <Route path="/book/:bookTitle" element={<Book />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/bookoria-bookstore/" element={<Home />} />
+          <Route path="/bookoria-bookstore/category/:bookCategory" element={<BooksPages />} />
+          <Route path="/bookoria-bookstore/book/:bookTitle" element={<Book />} />
+          <Route path="/bookoria-bookstore/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -32,11 +32,11 @@ function Navbar() {
 
       <ul className="nav-links">
         <li>
-          <Link to="/category/New Arrivals"> New Arrivals</Link>
+          <Link to="/bookoria-bookstore/category/New Arrivals"> New Arrivals</Link>
         </li>
         <li>
           {" "}
-          <Link to="/category/Best Sellers"> Best Sellers </Link>
+          <Link to="/bookoria-bookstore/category/Best Sellers"> Best Sellers </Link>
         </li>
         <li
           className="link-btn show-hover-dropdown"
@@ -58,7 +58,7 @@ function Navbar() {
         </li>
         <li>
           {/* <Link to="/cart">  <CiShoppingCart /> </Link> */}
-          <Link to="/cart">
+          <Link to="/bookoria-bookstore/cart">
             {" "}
             <RiShoppingBag4Line />
           </Link>

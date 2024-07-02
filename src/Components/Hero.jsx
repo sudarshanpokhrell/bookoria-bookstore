@@ -16,7 +16,7 @@ function Hero() {
           Discover a world of stories, knowledge, and imagination. Find your
           next favorite book with us.
         </p>
-        <Link to={"/category/all books"}>
+        <Link to={"/bookoria-bookstore/category/all books"}>
         <button className="button type1">
           <span className="btn-txt">Shop Now</span>
         </button>
