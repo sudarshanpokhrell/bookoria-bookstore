@@ -1,28 +1,56 @@
 import React, { useEffect, useContext, useState } from "react";
 import "./Book.css";
 import { useGlobalContext } from "../context";
-import { useParams, Link } from "react-router-dom";
-import CartContext from '../CartContext';
+import { useParams } from "react-router-dom";
+import CartContext from "../CartContext";
+import Carausel from "./../Components/Carausel";
 
 function Book() {
-  const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
+  const { cart, addToCart, increaseQuantity, decreaseQuantity } =
+    useContext(CartContext);
   const { bookTitle } = useParams();
   const { bookData } = useGlobalContext();
-  const book = bookData.find((item) => item.title === bookTitle);
-  const sortedSoldBooks = [...bookData].sort((a, b) => b.sold - a.sold);
 
-  const cartItem = cart.find(item => item.bookID === book.bookID);
+  const book = bookData.find((item) => item.title === bookTitle);
+
+  const suggestionBooks = bookData
+    .filter(
+      (item) =>
+        item.category === book.category &&
+        item.bookID !== book.bookID
+    )
+    .sort((a, b) => b.sold - a.sold)
+    .slice(0, 8);
+
+  console.log(suggestionBooks);
+  if (!book) {
+    return <div>Book not found</div>;
+  }
+
+  const cartItem = cart.find((item) => item.bookID === book.bookID);
+
   const initialQuantity = cartItem ? cartItem.quantity : 1; // Set initial quantity from cart or default to 1
   const [quantity, setQuantity] = useState(initialQuantity);
 
-  
   useEffect(() => {
     window.scrollTo(0, 0);
-    setQuantity(initialQuantity)
-  }, [bookTitle]);
+    setQuantity(initialQuantity);
+  }, [bookTitle, initialQuantity]);
 
   const handleAddToCart = () => {
     addToCart(book, quantity);
+  };
+
+  const handleDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prev) => prev - 1);
+    }
+  };
+
+  const handleIncreaseQuantity = () => {
+    if (quantity < book.stock) {
+      setQuantity((prev) => prev + 1);
+    }
   };
 
   return (
@@ -43,11 +71,21 @@ function Book() {
           </p>
 
           <div className="book-quantity">
-            <p className="quantity-label">Quantity: {cartItem && '(In cart)'}</p>
+            <p className="quantity-label">
+              Quantity: {cartItem && "(In cart)"}
+            </p>
             <div className="quantity-span">
-              <button onClick={()=> decreaseQuantity()}>-</button>
-              <span>{initialQuantity}</span>
-              <button onClick={() => increaseQuantity(book.bookID)}>+</button>
+              {cartItem ? (
+                <button onClick={() => decreaseQuantity(book.bookID)}>-</button>
+              ) : (
+                <button onClick={handleDecreaseQuantity}>-</button>
+              )}
+              <span>{quantity}</span>
+              {cartItem ? (
+                <button onClick={() => increaseQuantity(book.bookID)}>+</button>
+              ) : (
+                <button onClick={handleIncreaseQuantity}>+</button>
+              )}
             </div>
           </div>
           <div className="book-add-to-cart">
@@ -57,30 +95,7 @@ function Book() {
       </div>
       <div className="section-books">
         <h2 className="section-heading">Recommendation:</h2>
-        <div className="book-container">
-          {sortedSoldBooks.slice(0, 4).map((book, index) => (
-             <div className="book-div" key={index}>
-             <Link to={`/bookoria-bookstore/book/${book.title}`} className="book-link-hover">
-               <div className="book-card">
-                 <img
-                   className="book-img"
-                   src={book.coverImage}
-                   alt={book.title}
-                 />
-                 <div className="book-details">
-                   <div className="book-title">
-                     {book.title.length >= 50 ? `${book.title.substring(0,47)}...` : book.title }
-                   </div>
-                   <div className="book-price">Rs. {book.price}</div>
-                 </div>
-               </div>
-             </Link>
-             <button className="add-to-cart" onClick={() => addToCart(book, 1)}>
-               Add to Cart
-             </button>
-           </div>
-          ))}
-        </div>
+        <Carausel books={suggestionBooks.slice(0, 8)} />
       </div>
     </div>
   );

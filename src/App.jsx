@@ -1,5 +1,4 @@
 import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 
 import Search from "./Components/Search";
@@ -9,7 +8,6 @@ import BooksPages from "./Pages/BooksPages";
 import Cart from "./Pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import { useGlobalContext } from "./context";
 import Popup from "./Components/Popup";
 
 function App() {

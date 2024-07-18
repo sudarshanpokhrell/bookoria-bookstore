@@ -27,7 +27,7 @@ function Cart() {
               </div>
               <div className="cart-item-info">
                 <p className="cart-book-name">{item.title}</p>
-                <p className="cart-book-price">{item.price}</p>
+                <p className="cart-book-price">${item.price}</p>
               </div>
             </div>
             <div className="cart-item-quantity">
@@ -41,7 +41,7 @@ function Cart() {
                 className="cart-delete"
               />
             </div>
-            <div className="cart-item-total">{item.amount.toFixed(2)}</div>
+            <div className="cart-item-total">$ {item.amount.toFixed(2)}</div>
           </div>
         ))}
 
@@ -64,7 +64,7 @@ function Cart() {
     return (
       <div className="no-items-in-cart">
         <h2 className="cart-page-heading no-cart">Your Cart is Empty</h2>
-        <Link to={"/category/all books"}>
+        <Link to={"/bookoria-bookstore/category/all books"}>
           <button className="go-back">Go Back To Shopping</button>
         </Link>
       </div>
